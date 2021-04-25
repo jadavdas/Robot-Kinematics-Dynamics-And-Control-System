@@ -372,7 +372,7 @@ Eigen::VectorXd roblib::utils::poseDifference(Eigen::Vector3d desired_position, 
     return pose_difference;
 }
 
-// Jadav added
+
 
 bool roblib::utils::NearZero(const double val)
 {
@@ -505,7 +505,7 @@ Eigen::MatrixXd roblib::utils::MatrixExp6(const Eigen::MatrixXd& se3mat)
             0, 0, 0, 1;
         return m_ret;
     }
-    // If not negligible, MR page 105
+    
     else {
         double theta = (roblib::utils::AxisAng3(omgtheta))(3);
         Eigen::Matrix3d omgmat = se3mat.block<3, 3>(0, 0) / theta;
